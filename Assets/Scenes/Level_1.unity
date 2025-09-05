@@ -629,6 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moving: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!114 &859426151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,11 +642,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c2e2c4e6cb8e6488d5e03f3fb46b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  maxVelocity: {x: 60, y: 100}
+  speed: 28
+  maxVelocity: {x: 30, y: 100}
   jetSpeed: 1500
   standing: 0
-  standingThreshold: 4
+  standingThreshold: 0
   airSpeedMultiplier: 0.4
   alive: {fileID: 0}
 --- !u!70 &859426152
