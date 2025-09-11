@@ -93,8 +93,14 @@ public class Player : MonoBehaviour
 
                 renderer2D.flipX = forceX < 0;
             }
-
-            animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement
+            if (isJumping)
+            {
+                animator.SetInteger("AnimState", 2); //Set the animation state for horizontal movement
+            }
+            else
+            {
+                animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement
+            } 
         }
       
 
