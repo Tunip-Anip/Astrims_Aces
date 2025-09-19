@@ -21,7 +21,7 @@ public class Explode : MonoBehaviour
             
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
             if (playerCollider != null){
-                GameOver = true;
+                //GameOver = true;
             }
         }
     }
@@ -34,7 +34,7 @@ public class Explode : MonoBehaviour
 
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
             if (playerCollider != null){
-                GameOver = true;
+                //GameOver = true;
 
             }
         }
