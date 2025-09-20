@@ -123,10 +123,10 @@ TextureImporter:
         serializedVersion: 2
         x: 160
         y: 512
-        width: 256
-        height: 416
+        width: 288
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -143,12 +143,12 @@ TextureImporter:
       name: Astrim_1
       rect:
         serializedVersion: 2
-        x: 608
+        x: 607
         y: 512
         width: 288
-        height: 480
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
         width: 288
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,9 +190,9 @@ TextureImporter:
         x: 128
         y: 0
         width: 288
-        height: 416
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,10 +211,10 @@ TextureImporter:
         serializedVersion: 2
         x: 672
         y: 0
-        width: 256
-        height: 416
+        width: 288
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Astrim_5
       rect:
         serializedVersion: 2
-        x: 1184
+        x: 1185
         y: 0
-        width: 256
-        height: 416
+        width: 288
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +253,12 @@ TextureImporter:
       name: Astrim_6
       rect:
         serializedVersion: 2
-        x: 1696
+        x: 1697
         y: 0
-        width: 256
-        height: 416
+        width: 288
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

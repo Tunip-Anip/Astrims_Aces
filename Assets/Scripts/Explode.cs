@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //Important, if working with scenes you MUST include this.
+using UnityEngine.UI;
 
 public class Explode : MonoBehaviour
 {
@@ -21,7 +23,7 @@ public class Explode : MonoBehaviour
             
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
             if (playerCollider != null){
-                //GameOver = true;
+                SceneManager.LoadScene("SplashScreen");
             }
         }
     }
@@ -34,7 +36,7 @@ public class Explode : MonoBehaviour
 
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
             if (playerCollider != null){
-                //GameOver = true;
+                SceneManager.LoadScene("SplashScreen");
 
             }
         }
