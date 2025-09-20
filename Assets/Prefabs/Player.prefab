@@ -127,13 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c2e2c4e6cb8e6488d5e03f3fb46b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 24
-  maxVelocity: {x: 26, y: 100}
-  jetSpeed: 1500
+  speed: 70
+  maxVelocity: {x: 68, y: 100}
+  jetSpeed: 2000
   standing: 0
-  standingThreshold: 0.2
+  standingThreshold: 0.4
   airSpeedMultiplier: 0.4
-  alive: {fileID: 0}
+  alive: {fileID: 7145905488942902206}
 --- !u!114 &7015845083678261967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,9 +170,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 2
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &7145905488942902206
 CapsuleCollider2D:
@@ -208,8 +208,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.14101648, y: -0.060950518}
-  m_Size: {x: 1.7774839, y: 3.8672366}
+  m_Offset: {x: -0.14506495, y: -0.42928195}
+  m_Size: {x: 1.9829032, y: 4.6038995}
   m_Direction: 0
 --- !u!114 &7607802419282580150
 MonoBehaviour:
