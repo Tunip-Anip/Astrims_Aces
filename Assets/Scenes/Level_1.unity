@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_TileColorArray.Array.data[5].m_Data.r
       value: 0.8685461
       objectReference: {fileID: 0}
+    - target: {fileID: 4522404845505297944, guid: 5fea23c9353773147982a53e3c630954, type: 3}
+      propertyPath: m_CellSize.x
+      value: 20.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8127598058859382917, guid: 5fea23c9353773147982a53e3c630954, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.596817
