@@ -879,9 +879,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[4].m_Data
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[4].m_Data
+      value: 
+      objectReference: {fileID: -1248017572, guid: b6c710d9e09fddb4ea9274c752dfba4f, type: 3}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_TileIndex
       value: 0
@@ -923,8 +927,12 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[4].m_RefCount
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[4].m_RefCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
       propertyPath: m_Tiles.Array.data[5].second.m_AllTileFlags
@@ -936,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_TileSpriteIndex
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5023738966958359181, guid: e7d1472a741c0734db2b6237d6020e4c, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
@@ -6821,14 +6829,6 @@ PrefabInstance:
     - target: {fileID: 2911283785552878345, guid: 56d15fc3968461349b901ab1c6f8d86f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943415752945015238, guid: 56d15fc3968461349b901ab1c6f8d86f, type: 3}
-      propertyPath: speed
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943415752945015238, guid: 56d15fc3968461349b901ab1c6f8d86f, type: 3}
-      propertyPath: maxVelocity.x
-      value: 68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

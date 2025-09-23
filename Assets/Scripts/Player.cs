@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public CapsuleCollider2D alive; //Creates a variable to check if the player is alive
     private bool isJumping = false;
     private bool canJump = false;
+ 
 
     AudioSource audioData;
     
@@ -33,8 +34,7 @@ public class Player : MonoBehaviour
         controller = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         audioData = GetComponent<AudioSource>();
-
-        
+       
     }
 
     void Update()
@@ -116,8 +116,5 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
-
-
-
 
 }
