@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //Required if we want to work with Scenes
 
-
-
 public class Player : MonoBehaviour
 {
     public float speed = 150f; //Stores player speed as a float
@@ -13,16 +11,16 @@ public class Player : MonoBehaviour
     public bool standing; //Identifies whether the player is standing or not (True/False)
     public float standingThreshold = 4f; //Stores a variable to check if the player is standing on the ground
     public float airSpeedMultiplier = .3f; //Multiplies the air speed of the player
+    
+    private int Sigma;
 
     private Rigidbody2D body2D; //Creates a variable for the RigidBody2D component
     private SpriteRenderer renderer2D; //Creates a variable to render the sprite
     private PlayerController controller; //Creates a variable for the controller (created in a separate script)
-    private Animator animator; //Creates a variable to work with the Player animations
+    public Animator animator; //Creates a variable to work with the Player animations
     public CapsuleCollider2D alive; //Creates a variable to check if the player is alive
     private bool isJumping = false;
     private bool canJump = false;
- 
-
     AudioSource audioData;
     
   /*//Starts before the first frame. Gets the RigidBody2D, SpriteRenderer, PlayerController 
@@ -34,7 +32,7 @@ public class Player : MonoBehaviour
         controller = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         audioData = GetComponent<AudioSource>();
-       
+
     }
 
     void Update()
@@ -93,7 +91,11 @@ public class Player : MonoBehaviour
 
                 renderer2D.flipX = forceX < 0;
             }
-            if (isJumping)
+            if (Sigma == 1)
+            {
+                animator.SetInteger("AnimState", 3); //Set the animation state for horizontal movement
+            }
+            else if (isJumping)
             {
                 animator.SetInteger("AnimState", 2); //Set the animation state for horizontal movement
             }
