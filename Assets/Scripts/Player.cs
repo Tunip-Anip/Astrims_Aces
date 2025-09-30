@@ -43,10 +43,7 @@ public class Player : MonoBehaviour
           
         // Access the player's Y-axis position
         float playerYPosition = transform.position.y;
-        if (playerYPosition < -150)  //Check if the player has fallen below a certain position on the screen and return to the Splash Screen if true
-        {
-            SceneManager.LoadScene("SplashScreen");
-        }
+
     
         if (absVelY <= standingThreshold) //Check if the player is standing on the ground or not
         {
@@ -78,11 +75,11 @@ public class Player : MonoBehaviour
             }
             
         }
-        else if (GetVerticalSpeed() > 0)
+        else if (GetVerticalSpeed() > 1)
         {
             animator.SetInteger("AnimState", 2);
         }
-        else if (GetVerticalSpeed() < 0)
+        else if (GetVerticalSpeed() < -1)
         {
             animator.SetInteger("AnimState", 3);
         }
@@ -100,16 +97,16 @@ public class Player : MonoBehaviour
 
                 renderer2D.flipX = forceX < 0;
             }
-            else if (GetVerticalSpeed() > 0)
+            if (GetVerticalSpeed() > 16)
             {
                 animator.SetInteger("AnimState", 2);
             }
-            else if (GetVerticalSpeed() < 0)
+            else if (GetVerticalSpeed() < -16)
             {
                 animator.SetInteger("AnimState", 3);
             }
 
-            else
+            else if (!isJumping)
             {
                 animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement
             } 
