@@ -134,6 +134,7 @@ MonoBehaviour:
   standing: 0
   standingThreshold: 0.4
   airSpeedMultiplier: 0.4
+  animator: {fileID: 0}
   alive: {fileID: 7145905488942902206}
 --- !u!114 &7015845083678261967
 MonoBehaviour:
@@ -234,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7277943505988038087}
   - component: {fileID: 5178174795096022871}
+  - component: {fileID: 675379919010555960}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -302,3 +304,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8289075, y: 2.1680055}
   m_EdgeRadius: 0
+--- !u!114 &675379919010555960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372378124003910802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a3831bedff74b4cb78106846af966a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sigma: 0

@@ -11,9 +11,7 @@ public class Player : MonoBehaviour
     public bool standing; //Identifies whether the player is standing or not (True/False)
     public float standingThreshold = 4f; //Stores a variable to check if the player is standing on the ground
     public float airSpeedMultiplier = .3f; //Multiplies the air speed of the player
-    
-    private int Sigma;
-
+    public Trigger script;
     private Rigidbody2D body2D; //Creates a variable for the RigidBody2D component
     private SpriteRenderer renderer2D; //Creates a variable to render the sprite
     private PlayerController controller; //Creates a variable for the controller (created in a separate script)
@@ -22,10 +20,10 @@ public class Player : MonoBehaviour
     private bool isJumping = false;
     private bool canJump = false;
     AudioSource audioData;
-    
-  /*//Starts before the first frame. Gets the RigidBody2D, SpriteRenderer, PlayerController 
-  and Animator from the Player sprite and stores them in relevant variables*/
-    void Start() 
+
+    /*//Starts before the first frame. Gets the RigidBody2D, SpriteRenderer, PlayerController 
+    and Animator from the Player sprite and stores them in relevant variables*/
+    void Start()
     {
         body2D = GetComponent<Rigidbody2D>();
         renderer2D = GetComponent<SpriteRenderer>();
@@ -34,7 +32,7 @@ public class Player : MonoBehaviour
         audioData = GetComponent<AudioSource>();
 
     }
-
+        private float GetVerticalSpeed() => body2D.linearVelocity.y;
     void Update()
     {
         animator.SetInteger("AnimState", 0);
@@ -62,7 +60,14 @@ public class Player : MonoBehaviour
                 canJump = false; //Prevent multiple jumps until landing.
                 
                 forceY = jetSpeed * controller.moving.y;
-                animator.SetInteger("AnimState", 2);
+                if (GetVerticalSpeed() > 0)
+                {
+                    animator.SetInteger("AnimState", 2);
+                }
+                else if (GetVerticalSpeed() < 0)
+                {
+                    animator.SetInteger("AnimState", 3);
+                }
                 
 
                 
@@ -73,16 +78,20 @@ public class Player : MonoBehaviour
             }
             
         }
-        else
+        else if (GetVerticalSpeed() > 0)
         {
             animator.SetInteger("AnimState", 2);
-            standing = false;
+        }
+        else if (GetVerticalSpeed() < 0)
+        {
+            animator.SetInteger("AnimState", 3);
         }
 
         var forceX = 0f;
 
         if (controller.moving.x != 0) //Check if the player is moving horizontally
         {
+            
             if (absVelX < maxVelocity.x) //Check if the player's horizontal velocity is within limits and adjust force accordingly
             {
                 var newSpeed = speed * controller.moving.x;
@@ -91,14 +100,15 @@ public class Player : MonoBehaviour
 
                 renderer2D.flipX = forceX < 0;
             }
-            if (Sigma == 1)
+            else if (GetVerticalSpeed() > 0)
             {
-                animator.SetInteger("AnimState", 3); //Set the animation state for horizontal movement
+                animator.SetInteger("AnimState", 2);
             }
-            else if (isJumping)
+            else if (GetVerticalSpeed() < 0)
             {
-                animator.SetInteger("AnimState", 2); //Set the animation state for horizontal movement
+                animator.SetInteger("AnimState", 3);
             }
+
             else
             {
                 animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement

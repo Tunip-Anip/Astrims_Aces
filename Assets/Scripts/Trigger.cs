@@ -9,23 +9,30 @@ public class Trigger : MonoBehaviour
 {
     //Creates a variable to work with the Player animations
     public int Sigma;
-    void Start() 
+    void Start()
     {
 
     }
-    void Update() {
+    void Update()
+    {
 
-        Sigma = 0;
+    }
 
-        //void OnCollisionEnter2D(Collision2D collision) //Function to enable jumping again after landing.
-        //{
+    void OnTriggerEnter2D(Collider2D target) //Function to enable jumping again after landing.
+    {
 
-        //if (collision.gameObject.CompareTag("Ground"))
-        if (Input.GetKey("g"))
+        if (target.gameObject.CompareTag("Ground"))
+        //if (Input.GetKey("g"))
         {
             Sigma = 1;
         }
     }
-
+    void OnTriggerExit2D(Collider2D target)
+    {
+        if (target.gameObject.CompareTag("Ground"))
+        {
+            Sigma = 0;
+        }
+    }
 }
     
