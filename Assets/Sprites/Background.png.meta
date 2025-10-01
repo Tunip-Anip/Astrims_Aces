@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,8 +147,8 @@ TextureImporter:
       name: Background_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 4096
+        y: 2048
         width: 2048
         height: 2048
       alignment: 0
@@ -169,8 +169,8 @@ TextureImporter:
       name: Background_3
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 0
+        x: 6144
+        y: 2048
         width: 2048
         height: 2048
       alignment: 0
@@ -183,6 +183,138 @@ TextureImporter:
       bones: []
       spriteID: fbbaf2d0f7809db4cb2af8c99f543b9a
       internalID: -1773161703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_4
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 2048
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0157f2392547494f8c01b1a57a82b5a
+      internalID: 642559926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc9dd2599b4e984a937f2b054e294bc
+      internalID: -1488337794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a229e3bfe1a7db644b38feaa36c3200c
+      internalID: -220758469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_7
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235664c01213a1f47bf11a7e57382a09
+      internalID: 1572655565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_8
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19ca152fa3f80e47a27140a4141c406
+      internalID: -329494030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_9
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e11560efe4f4344c9833ccbc7abae09
+      internalID: -1920620110
       vertices: []
       indices: 
       edges: []
@@ -205,6 +337,12 @@ TextureImporter:
       Background_1: 1646667261
       Background_2: 918337351
       Background_3: -1773161703
+      Background_4: 642559926
+      Background_5: -1488337794
+      Background_6: -220758469
+      Background_7: 1572655565
+      Background_8: -329494030
+      Background_9: -1920620110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
