@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement; //Required if we want to work with Scenes
 public class Trigger : MonoBehaviour
 {
     //Creates a variable to work with the Player animations
-    public int Sigma;
+    public static bool WallTouch;
     void Start()
     {
 
@@ -24,14 +24,14 @@ public class Trigger : MonoBehaviour
         if (target.gameObject.CompareTag("Ground"))
         //if (Input.GetKey("g"))
         {
-            Sigma = 1;
+            WallTouch = true;
         }
     }
     void OnTriggerExit2D(Collider2D target)
     {
         if (target.gameObject.CompareTag("Ground"))
         {
-            Sigma = 0;
+            WallTouch = false;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement; //Required if we want to work with Scenes
 
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
         audioData = GetComponent<AudioSource>();
 
     }
-        private float GetVerticalSpeed() => body2D.linearVelocity.y;
+    private float GetVerticalSpeed() => body2D.linearVelocity.y;
     void Update()
     {
         animator.SetInteger("AnimState", 0);
@@ -40,83 +41,91 @@ public class Player : MonoBehaviour
         var absVelY = Mathf.Abs(body2D.linearVelocity.y); //Creates a variable to store vertical movement velocity (y)
         var forceY = 0f; //Creates a variable to store force
 
-          
+
         // Access the player's Y-axis position
         float playerYPosition = transform.position.y;
 
-    
-        if (absVelY <= standingThreshold) //Check if the player is standing on the ground or not
-        {
-            
-            standing = true;
 
-            if (controller.moving.y > 0 && !isJumping && canJump)  // Check if the player is moving upwards and allow jumping
+        if (!PauseMenu.isPaused)
+        {
+            if (absVelY <= standingThreshold) //Check if the player is standing on the ground or not
             {
-                //audioData.Play(0);
-                isJumping = true;
-                canJump = false; //Prevent multiple jumps until landing.
-                
-                forceY = jetSpeed * controller.moving.y;
-                if (GetVerticalSpeed() > 0)
+
+                standing = true;
+
+                if (controller.moving.y > 0 && !isJumping && canJump)  // Check if the player is moving upwards and allow jumping
+                {
+                    //audioData.Play(0);
+                    isJumping = true;
+                    canJump = false; //Prevent multiple jumps until landing.
+
+                    forceY = jetSpeed * controller.moving.y;
+                    if (GetVerticalSpeed() > 0)
+                    {
+                        animator.SetInteger("AnimState", 2);
+                    }
+                    else if (GetVerticalSpeed() < 0)
+                    {
+                        animator.SetInteger("AnimState", 3);
+                    }
+
+
+
+                }
+                else if (absVelY == 0 && !standing) //Check if the player is not moving vertically and set the animation state accordingly
                 {
                     animator.SetInteger("AnimState", 2);
                 }
-                else if (GetVerticalSpeed() < 0)
-                {
-                    animator.SetInteger("AnimState", 3);
-                }
-                
 
-                
             }
-            else if (absVelY == 0 && !standing) //Check if the player is not moving vertically and set the animation state accordingly
-            {
-               animator.SetInteger("AnimState", 2);
-            }
-            
-        }
-        else if (GetVerticalSpeed() > 1)
-        {
-            animator.SetInteger("AnimState", 2);
-        }
-        else if (GetVerticalSpeed() < -1)
-        {
-            animator.SetInteger("AnimState", 3);
-        }
-
-        var forceX = 0f;
-
-        if (controller.moving.x != 0) //Check if the player is moving horizontally
-        {
-            
-            if (absVelX < maxVelocity.x) //Check if the player's horizontal velocity is within limits and adjust force accordingly
-            {
-                var newSpeed = speed * controller.moving.x;
-
-                forceX = standing ? newSpeed : (newSpeed * airSpeedMultiplier);
-
-                renderer2D.flipX = forceX < 0;
-            }
-            if (GetVerticalSpeed() > 16)
+            else if (GetVerticalSpeed() > 1)
             {
                 animator.SetInteger("AnimState", 2);
             }
-            else if (GetVerticalSpeed() < -16)
+            else if (GetVerticalSpeed() < -1)
             {
                 animator.SetInteger("AnimState", 3);
             }
 
-            else if (!isJumping)
-            {
-                animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement
-            } 
-        }
-      
+            var forceX = 0f;
 
-        body2D.AddForce(new Vector2(forceX, forceY)); //Apply the calculated forces to the player's Rigidbody2D
+            if (controller.moving.x != 0) //Check if the player is moving horizontally
+            {
+
+                if (absVelX < maxVelocity.x) //Check if the player's horizontal velocity is within limits and adjust force accordingly
+                {
+                    var newSpeed = speed * controller.moving.x;
+
+                    forceX = standing ? newSpeed : (newSpeed * airSpeedMultiplier);
+
+                    renderer2D.flipX = forceX < 0;
+                }
+                if (GetVerticalSpeed() > 16)
+                {
+                    animator.SetInteger("AnimState", 2);
+                }
+                else if (GetVerticalSpeed() < -16)
+                {
+                    animator.SetInteger("AnimState", 3);
+                }
+
+                else if (!isJumping)
+                {
+                    animator.SetInteger("AnimState", 1); //Set the animation state for horizontal movement
+                }
+            }
+
+
+            body2D.AddForce(new Vector2(forceX, forceY)); //Apply the calculated forces to the player's Rigidbody2D
+            if (Trigger.WallTouch && controller.moving.x != 0)
+            {
+                animator.SetInteger("AnimState", 4);
+                
+            }
+        }
     }
 
-    
+
     void OnCollisionEnter2D(Collision2D collision) //Function to enable jumping again after landing.
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -125,5 +134,4 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
-
 }
