@@ -210,7 +210,7 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
+  m_CompositeOperation: 3
   m_CompositeOrder: 0
   m_Offset: {x: -0.14506495, y: -0.35261828}
   m_Size: {x: 1.9829032, y: 4.450572}
