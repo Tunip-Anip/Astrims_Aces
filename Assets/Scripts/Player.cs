@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     public CapsuleCollider2D alive; //Creates a variable to check if the player is alive
     private bool isJumping = false;
     private bool canJump = false;
+    private int i;
+    public float lerpDuration = 2f;
+    private float lerpTime = 0f;
+    private bool goingToRed = true;
     AudioSource audioData;
 
     /*//Starts before the first frame. Gets the RigidBody2D, SpriteRenderer, PlayerController 
@@ -120,7 +124,7 @@ public class Player : MonoBehaviour
             if (Trigger.WallTouch && controller.moving.x != 0)
             {
                 animator.SetInteger("AnimState", 4);
-                
+
             }
         }
     }
@@ -135,3 +139,6 @@ public class Player : MonoBehaviour
         }
     }
 }
+
+
+

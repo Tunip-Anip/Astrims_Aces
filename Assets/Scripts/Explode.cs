@@ -19,10 +19,12 @@ public class Explode : MonoBehaviour
     {
         // Check if the entering GameObject has the "Deadly" tag
 
-        if (target.gameObject.CompareTag("Deadly")){
-            
+        if (target.gameObject.CompareTag("Deadly"))
+        {
+
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
-            if (playerCollider != null){
+            if (playerCollider != null)
+            {
                 SceneManager.LoadScene("SplashScreen");
             }
         }
@@ -32,13 +34,16 @@ public class Explode : MonoBehaviour
     void OnCollisionEnter2D(Collision2D target)
     {
         // Check if the colliding GameObject has the "Deadly" tag
-        if (target.gameObject.CompareTag("Deadly")){
+        if (target.gameObject.CompareTag("Deadly"))
+        {
 
             // Disable the CapsuleCollider2D on the Player to prevent further collisions
-            if (playerCollider != null){
+            if (playerCollider != null)
+            {
                 SceneManager.LoadScene("SplashScreen");
 
             }
         }
     }
+    
 }
