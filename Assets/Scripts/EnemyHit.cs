@@ -32,20 +32,4 @@ public class EnemyHit : MonoBehaviour
             }
         }
     }
-
-    // This method is called when a collision with another Collider2D occurs.
-    void OnCollisionEnter2D(Collision2D target)
-    {
-        // Check if the colliding GameObject has the "Deadly" tag
-        if (target.gameObject.CompareTag("Enemy"))
-        {
-
-            // Disable the CapsuleCollider2D on the Player to prevent further collisions
-            if (playerCollider != null)
-            {
-                Hearts -= 1;
-
-            }
-        }
-    }
 }

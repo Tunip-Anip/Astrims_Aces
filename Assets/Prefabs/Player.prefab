@@ -140,6 +140,7 @@ MonoBehaviour:
   script: {fileID: 0}
   animator: {fileID: 0}
   alive: {fileID: 7145905488942902206}
+  lerpDuration: 2
 --- !u!114 &7015845083678261967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +359,6 @@ GameObject:
   - component: {fileID: 2343665816298926146}
   - component: {fileID: 7737760825248704195}
   - component: {fileID: 7307171520172759184}
-  - component: {fileID: 8522113989181307897}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -374,16 +374,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6572629799515855485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 83.13}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.10428737}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2911283785552878345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.06, y: 9.12}
-  m_SizeDelta: {x: 25.6, y: 5.12}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -48.7, y: 253.3}
+  m_SizeDelta: {x: 847.6667, y: 287.66666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &3670078849776865430
 SpriteRenderer:
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 73
   m_Sprite: {fileID: -8630923909508717717, guid: 014c840627feb2b42b1c076d08c8a3bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -550,26 +550,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!223 &8522113989181307897
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572629799515855485}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
