@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 4445772555518046961}
   - component: {fileID: 6850183857209703205}
   - component: {fileID: 3924474162436650672}
-  - component: {fileID: 304522186373068700}
   m_Layer: 0
   m_Name: Blob
   m_TagString: Enemy
@@ -264,15 +263,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.27051, y: 4.3005395}
   m_EdgeRadius: 0
---- !u!114 &304522186373068700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251827313120202215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618b7044b4ac5554dacbd30e1ed36745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
