@@ -121,9 +121,13 @@ public class Player : MonoBehaviour
 
 
             body2D.AddForce(new Vector2(forceX, forceY)); //Apply the calculated forces to the player's Rigidbody2D
-            if (Trigger.WallTouch && controller.moving.x != 0)
+            if (Trigger.WallTouch)
             {
                 animator.SetInteger("AnimState", 4);
+                isJumping = false;
+                canJump = true;
+                standing = true;
+
 
             }
         }
