@@ -124,9 +124,13 @@ public class Player : MonoBehaviour
             if (Trigger.WallTouch)
             {
                 animator.SetInteger("AnimState", 4);
-                isJumping = false;
-                canJump = true;
-                standing = true;
+                if(controller.moving.y != 0){                    
+                    isJumping = false;
+                    canJump = true;
+                    standing = true;
+                    forceX = 30;
+                    }
+
 
 
             }

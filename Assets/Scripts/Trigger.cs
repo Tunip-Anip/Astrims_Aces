@@ -9,6 +9,7 @@ public class Trigger : MonoBehaviour
 {
     //Creates a variable to work with the Player animations
     public static bool WallTouch;
+    
     void Start()
     {
 
